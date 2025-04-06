@@ -1,0 +1,129 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Lets mouse clicks pass through if needed */
+}
+
+#title {
+  position: absolute;
+  top: 30px;  /* Adjusted for better positioning at the top */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #471A45;
+  text-align: center;
+  pointer-events: auto;
+  max-width: 40%;
+  padding: 10px;
+}
+
+#top-left-info {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  max-width: 25%;
+  font-family: Segoe UI, sans-serif;
+  font-size: 16px;
+  color: #85307F;
+  padding: 10px;
+  border-radius: 6px;
+  pointer-events: auto;
+}
+
+/* Variable Explanation */
+
+#var-list {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  font-family: Segoe UI, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column; /* Stacks the vars vertically */
+  pointer-events: auto;
+  text-align: right;
+}
+
+#var-list .var1,
+#var-list .var2,
+#var-list .var3,
+#var-list .var4,
+#var-list .var5,
+#var-list .var6 {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Specific colors for each var */
+.var1 { color: #006A90; } 
+.var2 { color: #9FAB20; } 
+.var3 { color: #EC008D; } 
+.var4 { color: #943590; } 
+.var5 { color: #F6821F;} 
+.var6 { color: #00ADAE;} 
+
+/* Hover effect */
+#var-list .var1:hover {
+  background-color: #006A90;
+  color: white;
+}
+#var-list .var2:hover {
+  background-color: #CCDB29;
+  color: white;
+}
+#var-list .var3:hover {
+  background-color: #EC008D;
+  color: white;
+}
+#var-list .var4:hover {
+  background-color: #943590;
+  color: white;
+}
+#var-list .var5:hover {
+  background-color: #F6821F;
+  color: white;
+}
+#var-list .var6:hover {
+  background-color: #00ADAE;
+  color: white;
+}
+
+#text-display {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 16px;
+  color: #85307F;
+  max-width: 50%;
+  text-align: center;
+  display: none; /* Hide initially */
+  transition: opacity 0.3s ease;
+  opacity: 0;  /* Initially set to 0 for smoother transition */
+}
+
+#text-display.show {
+  display: block; /* Show when clicked */
+  opacity: 1;
+}

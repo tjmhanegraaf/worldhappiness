@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+      
+</head>
+<body>
+    <div id="ui">
+        <div id="title">World<br>Happiness Report<br>2024</div>
+        
+        <div id="top-left-info">
+            Comparing The Happiness Reports' six contributors to happiness among countries. 
+            Each variable compared to the average contribution to all countries' happiness score. 
+            Higher than average values rise upwards, lower than average values fall downwards.  
+        </div>
+        <div id="text-display"></div>
+ 
+        <div id="var-list">
+            <div class="var1" data-text="GDP per capita is in terms of Purchasing Power Parity (PPP) adjusted to constant 2021 international dollars. The equation uses the natural log of GDP per capita as this form fits the data significantly better than GDP per capita.">
+                GDP per capita &#8226;
+            </div>
+        
+            <div class="var2" data-text="Generosity is the residual from regressing the national average of GWP responses to the donation question 'Have you donated money to a charity in the past month?' on log GDP per capita.">
+                Generosity &#8226;
+            </div>
+        
+            <div class="var3" data-text="Freedom to make life choices is the national average of binary responses to the GWP question 'Are you satisfied or dissatisfied with your freedom to choose what you do with your life?'">
+                Freedom &#8226;
+            </div>
+        
+            <div class="var4" data-text="Social support is the national average of the binary responses (0=no, 1=yes) to the Gallup World Poll (GWP) question “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”">
+                Social support &#8226;
+            </div>
+        
+            <div class="var5" data-text="Perceptions of corruption is the average of binary answers to two GWP questions: 'Is corruption widespread throughout the government or not?' and 'Is corruption widespread within businesses or not?' Where data for government corruption are missing, the perception of business corruption is used as the overall corruption-perception measure.">
+                Corruption &#8226;
+            </div>
+        
+            <div class="var6" data-text="The time series for healthy life expectancy at birth are constructed based on data from the World Health Organization (WHO) Global Health Observatory data repository, with data available up to 2021 (last updated: 2 August 2024). To match this report’s sample period (2005–2024), interpolation (when necessary) and extrapolation are used.">
+                Life Expectancy &#8226;
+            </div>
+        
+           
+        </div>
+        <div id="label-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;"></div>
+
+        </div>
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
